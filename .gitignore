@@ -4,6 +4,7 @@
 ### React ###
 # dependencies
 node_modules/
+
 /.pnp
 .pnp.js
 
@@ -130,6 +131,7 @@ celerybeat-schedule
 
 # Environments
 .env
+.myenv
 .venv
 env/
 venv/
