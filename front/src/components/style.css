@@ -1,0 +1,39 @@
+
+
+* {
+    background-color: #F5F3F3;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+.ui.container.segment.about {
+    margin-bottom: 20px;
+}
+
+.right.menu {
+    background-color:white;
+}
+
+.about{
+    margin-bottom: 50px;
+}
+
+h3.about{
+    background-color:white;
+}
+
+.author,
+.archive {
+    background-color:rgba(255,0,0,0) !important;
+    margin: 15px;
+}
+
+.author a,
+.author div,
+.archive label {
+    background-color:rgba(255,0,0,0) !important;
+}
+
+.archive.title {
+    font-size: 18px;
+}
+

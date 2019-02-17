@@ -1,0 +1,12 @@
+p,
+del,
+u,
+strong
+ {
+    background-color:rgba(255,0,0,0) !important;
+} 
+
+.card {
+    margin-bottom: 15px !important;
+    padding: 0px !important;
+}
