@@ -23,7 +23,8 @@ env_file = str(BASE_DIR.path('.env'))
 env = environ.Env()
 
 # 環境変数でDJANGO_READ_ENV_FILEをTrueにしておくと.envを読んでくれる。
-READ_DOT_ENV_FILE = env.bool('DJANGO_READ_DOT_ENV_FILE', default=False)
+#READ_DOT_ENV_FILE = env.bool('DJANGO_READ_DOT_ENV_FILE', default=False)
+READ_DOT_ENV_FILE = env.bool('DJANGO_READ_DOT_ENV_FILE', default=True)
 
 if READ_DOT_ENV_FILE:
     env_file = str(BASE_DIR.path('.env'))
@@ -94,8 +95,10 @@ ROOT_URLCONF = 'myblog.urls'
 
 TEMPLATES = [
     {
+        #'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'front', 'build')],
+        #'DIRS':[],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -156,7 +159,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+STATICFILES_DIR = [
+    os.path.join(BASE_DIR, 'front', 'build', 'static')
+]
+
 STATIC_URL = '/static/'
+STATIC_ROOT = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

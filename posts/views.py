@@ -1,3 +1,4 @@
+from django.views.generic import View
 from django.shortcuts import render
 
 from .serializer import PostSerializer, CommentSerializer, CategorySerializer, MyUserSerializer
@@ -10,8 +11,12 @@ from rest_framework import viewsets, filters, generics
 from rest_framework.pagination import LimitOffsetPagination
 from django.db.models.functions import TruncMonth
 
-def home (request):
-    return render (request, 'posts/home.html')
+class FrontendRenderView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "front/build/index.html", {})
+
+# def home (request):
+#     return render (request, 'posts/home.html')
 
 class PostViewSet(viewsets.ModelViewSet):
     """
