@@ -1,0 +1,2 @@
+['manage.py', 'dumpdata', '--format=json', 'users']
+[{"model": "users.myuser", "pk": 1, "fields": {"password": "pbkdf2_sha256$100000$rsTusR1xIjMZ$ntXnLBzfePMshr2GMCUHiQT+xSEL31OeWO5zUOWSOL0=", "last_login": "2019-02-19T17:10:06.899Z", "username": null, "email": "takumi@takumi.com", "is_active": true, "is_admin": true, "user_permissions": []}}]

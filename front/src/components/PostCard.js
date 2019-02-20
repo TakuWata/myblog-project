@@ -8,7 +8,9 @@ class PostCard extends React.Component {
         this.props.fetchPosts();
     }
     render(){
-        const PostList = this.props.posts.slice(0,3).map((post) => {
+        console.log(this.props.posts)
+        // const PostList = this.props.posts.slice(0,3).map((post) => {
+        const PostList = this.props.posts.map((post) => {
             if (!post.is_draft){
                 if (this.props.match['url'].toLowerCase() === '/home' ){
                     return (

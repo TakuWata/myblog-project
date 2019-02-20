@@ -62,9 +62,9 @@ class App extends React.Component{
                         <div className="eleven wide column">
                             <div ui segment>
                                 <Route path={["/home", "/category/:category", "/login", "/signup", "/about"]} exact component = {PostDetail}  />
-                                <Route path='/posts/:id' component = {PostMoreDetail} />
-                                <Route path='/admin/posts/:id' component={() => <PostDetailView {...this.props} />} />
-                                <Route path='/results' component={SearchResult} />
+                                <Route path='/posts/:id' exact component = {PostMoreDetail} />
+                                <Route path='/admin/posts/:id' exact component={() => <PostDetailView {...this.props} />} />
+                                <Route path='/results' exact component={SearchResult} />
                             </div>
                         </div>
                         <div className="five wide column">

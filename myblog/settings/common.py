@@ -17,7 +17,6 @@ import environ
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 BASE_DIR = environ.Path(__file__) - 3
-print(BASE_DIR)
 
 env_file = str(BASE_DIR.path('.env'))
 env = environ.Env()
@@ -93,12 +92,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'myblog.urls'
 
+REACT_APP_DIR = os.path.join(BASE_DIR, 'front')
+
 TEMPLATES = [
     {
-        #'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'front', 'build')],
-        #'DIRS':[],
+        'DIRS': [os.path.join(REACT_APP_DIR, 'build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,7 +121,6 @@ DATABASES = {
     'default': env.db()
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
@@ -141,7 +139,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
@@ -155,16 +152,15 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATICFILES_DIR = [
-    os.path.join(BASE_DIR, 'front', 'build', 'static')
-]
-
 STATIC_URL = '/static/'
-STATIC_ROOT = '/static/'
+STATIC_ROOT = 'static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'front', 'build', 'static/'),
+]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -172,6 +168,7 @@ MEDIA_URL = '/media/'
 AUTH_USER_MODEL = 'users.MyUser'
 
 CORS_ORIGIN_ALLOW_ALL = True
+
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True

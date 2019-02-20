@@ -23,7 +23,7 @@ class PostDetail extends React.Component{
                                 <div className="image"><img src={post.image} /></div>
                                 {/* <div className="extra content">{EditorState.createWithContent(convertFromRaw(JSON.parse(post.body)))}</div> */}
                                 <div className="extra content">
-                                    {renderHTML(draftToHtml(JSON.parse(post.body)))}
+                                    {post.body !== "" ? renderHTML(draftToHtml(JSON.parse(post.body))):""}
                                 </div>
                                 {/* {draftToHtml(post.body)} */}
                             </div>

@@ -9,12 +9,12 @@ class Category(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=150)
-    author = models.ForeignKey(MyUser, on_delete=models.SET_NULL, null=True)
+    author = models.ForeignKey(MyUser, on_delete=models.SET_NULL, blank=True, null=True)
     body = models.TextField (blank=True, null=True)
     is_draft = models.BooleanField (default=False)
-    created_at = models.DateTimeField (auto_now_add=True)
-    published_at = models.DateTimeField (auto_now=True)
-    modified_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField (auto_now_add=True, null=True, blank=True)
+    published_at = models.DateTimeField(auto_now=True, null=True, blank=True)
+    modified_at = models.DateTimeField(auto_now=True, null=True, blank=True)
     related = models.ManyToManyField("self", blank=True)
     category = models.ManyToManyField(Category, blank=True)
     image = models.ImageField(upload_to='images/', blank=True, null=True)
