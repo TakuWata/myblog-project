@@ -33,7 +33,7 @@ if READ_DOT_ENV_FILE:
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 
-ALLOWED_HOSTS = ['52.197.120.49']
+ALLOWED_HOSTS = ['52.197.120.49', 'localhost']
 
 SECRET_KEY = env('SECRET_KEY')
 
@@ -118,7 +118,18 @@ WSGI_APPLICATION = 'myblog.wsgi.application'
 
 
 DATABASES = {
-    'default': env.db()
+    #'default': env.db()
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': '/etc/mysql/my.cnf',
+        },
+        #'NAME': 'myblog_db',
+        #'USER': 'takuwata',
+        #'PASSWORD': 'gmE_N47KLEUnoF',
+        #'HOST': '/var/run/mysqld/mysqld.sock',
+        #'PORT': '3306',
+    }   
 }
 
 # Password validation
