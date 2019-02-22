@@ -124,11 +124,6 @@ DATABASES = {
         'OPTIONS': {
             'read_default_file': '/etc/mysql/my.cnf',
         },
-        #'NAME': 'myblog_db',
-        #'USER': 'takuwata',
-        #'PASSWORD': 'gmE_N47KLEUnoF',
-        #'HOST': '/var/run/mysqld/mysqld.sock',
-        #'PORT': '3306',
     }   
 }
 
