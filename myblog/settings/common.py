@@ -171,6 +171,8 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+CSRF_COOKIE_NAME = "csrftoken"
+
 AUTH_USER_MODEL = 'users.MyUser'
 
 CORS_ORIGIN_ALLOW_ALL = True
