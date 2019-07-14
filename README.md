@@ -1,3 +1,10 @@
+applicationの概要
+
+applicationの機能一覧
+
+使用している技術一覧
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
