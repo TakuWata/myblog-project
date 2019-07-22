@@ -1,5 +1,6 @@
 ## Applicationの概要
 - 会員登録すれば誰でも投稿可能なBlogサイト
+(現在一時的にサーバー停止中）
 
 ## Applicationの機能一覧
 - Sign Up/Login/認証機能
