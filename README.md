@@ -20,7 +20,7 @@
   - semantic-uiをcssフレームワークとして利用
   - yarnでパッケージ管理
 - Backend
-  - Django 2.0をBackend
+  - Django 2.0
   - MySQLをDBとして使用
   - Django restframeworkを使用してAPI(endpoint)を出力
   - DBのリレーションを設計し、migrationを用いて、modelを作成
