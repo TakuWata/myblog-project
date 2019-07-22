@@ -12,14 +12,19 @@
 - Frontend
   - React/Redux
   - Axiosを用いてサーバーサイドのDBにおけるCRUDの実行
+  - redux-thunkを用いたasync actionの実行
+  - react-router-domを用いたルーティング
   - facebook社のDraft.jsをeditorとして使用
-  - 
+  - mement jsで日付のフォーマッティング
+  - redux-form
+  - semantic-uiをcssフレームワークとして利用
+  - yarnでパッケージ管理
 - Backend
   - Django 2.0をBackend
   - MySQLをDBとして使用
   - Django restframeworkを使用してAPI(endpoint)を出力
   - DBのリレーションを設計し、migrationを用いて、modelを作成
+  - django rest authを用いた認証機能の実装
+  - fixtureを用いてDBに仮データを導入
+  - Gunicorn x nginxを用いて本番サーバーへデプロイ
   - AWS/EC2を用いてホスティング
-  
-  
-  
